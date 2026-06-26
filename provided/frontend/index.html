@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Portal</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f6f8;
+        color: #1f2933;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: #23436b;
+        color: #ffffff;
+        padding: 24px;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      section {
+        background: #ffffff;
+        border: 1px solid #d9e2ec;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      h1,
+      h2 {
+        margin-top: 0;
+      }
+
+      .status-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+
+      .status-box {
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+        padding: 12px;
+      }
+
+      .status-label {
+        display: block;
+        color: #52606d;
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+      }
+
+      .ok {
+        color: #0b7a3b;
+        font-weight: bold;
+      }
+
+      .error {
+        color: #b42318;
+        font-weight: bold;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        align-items: end;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      input {
+        border: 1px solid #bcccdc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+      }
+
+      button {
+        background: #23436b;
+        border: 0;
+        border-radius: 6px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 11px 16px;
+      }
+
+      button:hover {
+        background: #1a3352;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid #d9e2ec;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background: #f0f4f8;
+      }
+
+      #message {
+        min-height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Employee Portal</h1>
+      <p>A small starter app for practicing Docker fundamentals.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Connection Status</h2>
+        <div class="status-grid">
+          <div class="status-box">
+            <span class="status-label">Backend API</span>
+            <span id="backend-status">Checking...</span>
+          </div>
+          <div class="status-box">
+            <span class="status-label">Database</span>
+            <span id="database-status">Checking...</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Add Employee</h2>
+        <form id="employee-form">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="department">Department</label>
+            <input id="department" name="department" type="text" required />
+          </div>
+          <button type="submit">Add Employee</button>
+        </form>
+        <p id="message"></p>
+      </section>
+
+      <section>
+        <h2>Employees</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody id="employee-list">
+            <tr>
+              <td colspan="3">Loading employees...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
