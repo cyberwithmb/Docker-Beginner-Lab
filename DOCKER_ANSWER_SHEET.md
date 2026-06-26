@@ -37,9 +37,9 @@ Docker is commonly used for:
 - sharing projects with other developers
 - learning how real multi-service apps are deployed
 
-## Normal Method vs Docker Method
+## How Does Docker DIFFER from Bare Metal??
 
-In the normal method, you install everything directly on your machine.
+Normally when you run and install apps and services, you install everything directly on your machine.
 
 For this app, that means you would install:
 
@@ -49,9 +49,7 @@ For this app, that means you would install:
 - database tables
 - local environment variables
 
-Then you would run the frontend, backend, and database yourself.
-
-In the Docker method, each part of the app runs in its own container:
+Then you would run the frontend, backend, and database locally on your machine.
 
 ```text
 Browser -> Frontend Container -> Backend Container -> PostgreSQL Container
