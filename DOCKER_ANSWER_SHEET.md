@@ -49,6 +49,52 @@ Docker is commonly used for:
 
 Resource: [Docker Get Started](https://docs.docker.com/get-started/)
 
+## Fastest Docker Setup
+
+For this lab, the fastest setup for most learners is Docker Desktop.
+
+Docker Desktop includes the main tools you need:
+
+- Docker Engine, which runs containers
+- Docker CLI, which lets you run `docker` commands
+- Docker Compose, which runs multi-container apps from `docker-compose.yml`
+- a desktop UI for viewing containers, images, volumes, and logs
+
+Recommended install path:
+
+- Windows: install Docker Desktop with the WSL 2 backend.
+- macOS: install Docker Desktop for your chip type, Apple silicon or Intel.
+- Linux desktop: Docker Desktop is beginner-friendly, but Docker Engine is also common.
+- Linux server: Docker Engine is usually the better fit because servers do not need the desktop UI.
+
+Basic resources you need:
+
+- a 64-bit computer
+- virtualization enabled in BIOS/UEFI
+- enough RAM for Docker plus the containers
+- internet access to download Docker images
+- permission to install software
+
+For this lab, the app is small. The frontend, backend, and PostgreSQL containers should run comfortably on a normal development machine. Docker's current Windows guidance lists WSL 2, hardware virtualization, and 8 GB RAM for Docker Desktop on Windows. Docker's current macOS guidance lists at least 4 GB RAM.
+
+After installing Docker, verify it works:
+
+```bash
+docker --version
+docker compose version
+docker run hello-world
+```
+
+If `hello-world` runs successfully, Docker can download an image and start a container.
+
+Setup resources:
+
+- [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Install Docker Desktop on Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
+- [Install Docker Desktop on Linux](https://docs.docker.com/desktop/setup/install/linux/)
+- [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Docker Compose overview](https://docs.docker.com/compose/)
+
 ## How Docker Differs from Bare Metal
 
 Bare metal means the app or service runs directly on the machine's operating system.
