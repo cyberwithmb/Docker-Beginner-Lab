@@ -60,4 +60,6 @@ npm start
 
 Then open `provided/frontend/index.html` in your browser.
 
-Remember: the real purpose of the repo is to practice creating the Docker setup yourself.
+Remember: the real purpose of the repo is to practice creating the Docker setup yourself. Give it a shot using resources around the internet, write-ups, etc.
+
+If you get stuck, feel free to refer to @[the answer sheet](https://github.com/cyberwithmb/Docker-Beginner-Lab/blob/main/DOCKER_ANSWER_SHEET.md)
